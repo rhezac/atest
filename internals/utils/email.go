@@ -27,8 +27,8 @@ type Message struct {
 
 var (
 	host       = "smtp.gmail.com"
-	username   = "rhezac@gmail.com"
-	password   = "jlyjigrgdyrgdehg"
+	username   = ""
+	password   = ""
 	portNumber = "587"
 )
 
