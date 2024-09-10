@@ -1,0 +1,518 @@
+{
+	"info": {
+		"_postman_id": "a8432046-077a-47de-a50f-a6ee3f3d60d1",
+		"name": "Amartha-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6059568"
+	},
+	"item": [
+		{
+			"name": "Get Customer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/api/customer/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"customer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/api/customer/2936ddc3-48a7-4dce-b26a-1872e097a51a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"customer",
+						"2936ddc3-48a7-4dce-b26a-1872e097a51a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"albert\",\r\n\t\"nik\": \"312312334212\", \r\n\t\"phone\": \"2313322\",\r\n\t\"email\": \"albert@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/customer/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"customer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"albert\",\r\n\t\"nik\": \"312312334212\", \r\n\t\"phone\": \"1234355\",\r\n\t\"email\": \"albert@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/customer/b1f97d40-216c-40f7-bcd0-0b38ce827301",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"customer",
+						"b1f97d40-216c-40f7-bcd0-0b38ce827301"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Loan Account",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/api/loan/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"loan",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Loan Account By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/api/loan/d4e7c87c-85a0-4968-acaa-80c0c84a22e0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"loan",
+						"d4e7c87c-85a0-4968-acaa-80c0c84a22e0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proposed Loan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\":\"ca775d76-cce1-41f8-a068-6d242ed78ee8\",\r\n\t\"loan_product_id\": \"6d2a67ce-3d12-41ec-a92d-d7293258f9ff\",\r\n\t\"rate\": \"10.09\",\r\n\t\"principal_amount\": \"5000000\",\r\n\t\"roi\": \"2.00\",\r\n\t\"tenor_value\": 50,\r\n\t\"loan_status\": \"pending\",\r\n\t\"loan_state\" : \"proposed\",\r\n\t\"kind\" : \"\" //changes it later\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/loan/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"loan",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Loan Account Proposed",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rate\": 0.22,\r\n    \"principal_amount\": \"4000000\",\r\n    \"roi\": 19.6,\r\n    \"tenor_value\": 40\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/loan/d4e7c87c-85a0-4968-acaa-80c0c84a22e0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"loan",
+						"d4e7c87c-85a0-4968-acaa-80c0c84a22e0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Document",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Rheza/Pictures/1690376577607.jpg"
+						},
+						{
+							"key": "description",
+							"value": "surveyed photos",
+							"type": "text"
+						},
+						{
+							"key": "am_name",
+							"value": "jaspercoki",
+							"type": "text"
+						},
+						{
+							"key": "document_date",
+							"value": "12/10/2023",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/loan/d4e7c87c-85a0-4968-acaa-80c0c84a22e0/documents/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"loan",
+						"d4e7c87c-85a0-4968-acaa-80c0c84a22e0",
+						"documents",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download Document",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"albert\",\r\n\t\"nik\": \"312312334212\", \r\n\t\"phone\": \"2313322\",\r\n\t\"email\": \"alreat@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/download/1690376577607.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"download",
+						"1690376577607.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Loan Account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\": \"ca775d76-cce1-41f8-a068-6d242ed78ee8\",\r\n    \"loan_product_id\": \"6d2a67ce-3d12-41ec-a92d-d7293258f9ff\",\r\n    \"rate\": \"14\",\r\n    \"validate_date\": \"2023-09-07T02:54:01.877965Z\",\r\n    \"validate_by\": \"jhony\",\r\n    \"approve_date\": \"2023-09-10T02:54:01.877965Z\",\r\n    \"agreement_no\": \"21312332\",\r\n    \"agreement_date\": \"2023-09-11T02:54:01.877965Z\",\r\n    \"agreement_doc_id\": \"00000000-0000-0000-0000-000000000000\",\r\n    \"disbursement_date\": \"2023-09-12T02:54:01.877965Z\",\r\n    \"disbursement_officer\": \"abc\",\r\n    \"principal_amount\": \"5000000\",\r\n    \"total_amount\": \"200000\",\r\n    \"outstanding_amount\": \"233321322\",\r\n    \"roi\": \"5\",\r\n    \"tenor_value\": 50,\r\n    \"loan_status\": \"pending\",\r\n    \"loan_state\": \"proposed\",\r\n    \"kind\": \"\",\r\n    \"investors\": \"\",\r\n    \"documents\": {\r\n        \"id\": \"00230000-1100-4500-0033-000006750000\",\r\n        \"name\": \"foto\",\r\n        \"doc_url\": \"http://bbalblabla\",\r\n        \"description\": \"\",\r\n        \"document_date\": \"2023-09-04T02:54:01.877965Z\",\r\n        \"am_name\": \"aaa\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/loan/0dc25fd6-aad4-403d-963e-d6a3e58bc9ba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"loan",
+						"0dc25fd6-aad4-403d-963e-d6a3e58bc9ba"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Approved",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": \"a30480fe-6891-4691-abca-657e91cfc85d\",\r\n        \"customer_id\": \"2936ddc3-48a7-4dce-b26a-1872e097a51a\",\r\n        \"loan_product_id\": \"6d2a67ce-3d12-41ec-a92d-d7293258f9ff\",\r\n        \"rate\": \"16.22\",\r\n        \"validate_date\": \"0001-01-01T07:00:00+07:00\",\r\n        \"validate_by\": \"\",\r\n        \"approve_date\": \"0001-01-01T07:00:00+07:00\",\r\n        \"agreement_no\": \"\",\r\n        \"agreement_date\": \"0001-01-01T07:00:00+07:00\",\r\n        \"agreement_doc_id\": \"00000000-0000-0000-0000-000000000000\",\r\n        \"disbursement_date\": \"0001-01-01T07:00:00+07:00\",\r\n        \"disbursement_officer\": \"\",\r\n        \"principal_amount\": \"4000000\",\r\n        \"total_amount\": \"0\",\r\n        \"outstanding_amount\": \"0\",\r\n        \"roi\": \"9.6\",\r\n        \"tenor_value\": 40,\r\n        \"loan_status\": \"approved\",\r\n        \"loan_state\": \"approved\",\r\n        \"kind\": \"\",\r\n        \"investors\": null,\r\n        \"create_by\": \"system\",\r\n        \"update_by\": \"\",\r\n        \"create_date\": \"2024-09-09T20:55:24.094279+07:00\",\r\n        \"update_date\": \"2024-09-09T20:55:24.09445+07:00\",\r\n        \"documents\": {\r\n            \"id\": \"00000000-0000-0000-0000-000000000000\",\r\n            \"name\": \"\",\r\n            \"doc_url\": \"\",\r\n            \"description\": \"\",\r\n            \"document_date\": \"0001-01-01T00:00:00Z\",\r\n            \"am_name\": \"\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/loan/d4e7c87c-85a0-4968-acaa-80c0c84a22e0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"loan",
+								"d4e7c87c-85a0-4968-acaa-80c0c84a22e0"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Disburse",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"d4e7c87c-85a0-4968-acaa-80c0c84a22e0\",\r\n    \"customer_id\": \"ae133a38-9790-4dd8-acce-204dfa12a9d5\",\r\n    \"loan_product_id\": \"6d2a67ce-3d12-41ec-a92d-d7293258f9ff\",\r\n    \"rate\": \"14\",\r\n    \"validate_date\": \"2023-09-07T09:54:01.877965+07:00\",\r\n    \"validate_by\": \"jhony\",\r\n    \"approve_date\": \"2023-09-10T09:54:01.877965+07:00\",\r\n    \"agreement_no\": \"21312332\",\r\n    \"agreement_date\": \"2023-09-11T09:54:01.877965+07:00\",\r\n    \"agreement_doc_id\": \"00000000-0000-0000-0000-000000000000\",\r\n    \"disbursement_date\": \"2023-09-12T09:54:01.877965+07:00\",\r\n    \"disbursement_officer\": \"abc\",\r\n    \"principal_amount\": \"5000000\",\r\n    \"total_amount\": \"200000\",\r\n    \"outstanding_amount\": \"233321322\",\r\n    \"roi\": \"5\",\r\n    \"tenor_value\": 50,\r\n    \"loan_status\": \"active\",\r\n    \"loan_state\": \"disbursed\",\r\n    \"kind\": \"\",\r\n    \"investors\": [\r\n        {\r\n            \"id\": \"88fe026a-80ae-427f-aa9c-316b76f37a76\",\r\n            \"investor_id\": \"a6039341-e4b2-461f-9b39-87b668a7a36c\",\r\n            \"loan_id\": \"b63300b1-2306-4cc4-a8ba-4482bcc65c5c\",\r\n            \"invest_amount\": \"1000000\"\r\n        },\r\n        {\r\n            \"id\": \"7347123d-af18-42cb-9450-1cd79a08f933\",\r\n            \"investor_id\": \"a6039341-e4b2-461f-9b39-87b668a7a36c\",\r\n            \"loan_id\": \"b63300b1-2306-4cc4-a8ba-4482bcc65c5c\",\r\n            \"invest_amount\": \"1000000\"\r\n        },\r\n        {\r\n            \"id\": \"cd023db8-2439-40f1-a3e0-71fb7bff6a00\",\r\n            \"investor_id\": \"a6039341-e4b2-461f-9b39-87b668a7a36c\",\r\n            \"loan_id\": \"b63300b1-2306-4cc4-a8ba-4482bcc65c5c\",\r\n            \"invest_amount\": \"1000000\"\r\n        },\r\n        {\r\n            \"id\": \"4395da14-f4e7-4e44-96e9-d8ab20fd666e\",\r\n            \"investor_id\": \"a6039341-e4b2-461f-9b39-87b668a7a36c\",\r\n            \"loan_id\": \"b63300b1-2306-4cc4-a8ba-4482bcc65c5c\",\r\n            \"invest_amount\": \"1000000\"\r\n        }\r\n    ],\r\n    \"create_by\": \"\",\r\n    \"update_by\": \"system\",\r\n    \"create_date\": \"0001-01-01T07:00:00+07:00\",\r\n    \"update_date\": \"2024-09-10T14:22:34.948369+07:00\",\r\n    \"documents\": {\r\n        \"id\": \"00230000-1100-4500-0033-000006750000\",\r\n        \"name\": \"foto\",\r\n        \"doc_url\": \"http://bbalblabla\",\r\n        \"description\": \"\",\r\n        \"document_date\": \"2023-09-04T02:54:01.877965Z\",\r\n        \"am_name\": \"aaa\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/loan/d4e7c87c-85a0-4968-acaa-80c0c84a22e0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"loan",
+								"d4e7c87c-85a0-4968-acaa-80c0c84a22e0"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Invested",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": \"ae133a38-9790-4dd8-acce-204dfa12a9d5\",\r\n    \"loan_product_id\": \"6d2a67ce-3d12-41ec-a92d-d7293258f9ff\",\r\n    \"rate\": \"14\",\r\n    \"validate_date\": \"2023-09-07T02:54:01.877965Z\",\r\n    \"validate_by\": \"jhony\",\r\n    \"approve_date\": \"2023-09-10T02:54:01.877965Z\",\r\n    \"agreement_no\": \"21312332\",\r\n    \"agreement_date\": \"2023-09-11T02:54:01.877965Z\",\r\n    \"agreement_doc_id\": \"00000000-0000-0000-0000-000000000000\",\r\n    \"disbursement_date\": \"2023-09-12T02:54:01.877965Z\",\r\n    \"disbursement_officer\": \"abc\",\r\n    \"principal_amount\": \"5000000\",\r\n    \"total_amount\": \"200000\",\r\n    \"outstanding_amount\": \"233321322\",\r\n    \"roi\": \"5\",\r\n    \"tenor_value\": 50,\r\n    \"loan_status\": \"approved\",\r\n    \"loan_state\": \"invested\",\r\n    \"kind\": \"\",\r\n    \"investors\": [\r\n        {\r\n            \"id\": \"88fe026a-80ae-427f-aa9c-316b76f37a76\",\r\n            \"investor_id\": \"a6039341-e4b2-461f-9b39-87b668a7a36c\",\r\n            \"loan_id\": \"b63300b1-2306-4cc4-a8ba-4482bcc65c5c\",\r\n            \"invest_amount\": \"1000000\"\r\n        },\r\n        {\r\n            \"id\": \"7347123d-af18-42cb-9450-1cd79a08f933\",\r\n            \"investor_id\": \"a6039341-e4b2-461f-9b39-87b668a7a36c\",\r\n            \"loan_id\": \"b63300b1-2306-4cc4-a8ba-4482bcc65c5c\",\r\n            \"invest_amount\": \"1000000\"\r\n        },\r\n        {\r\n            \"id\": \"cd023db8-2439-40f1-a3e0-71fb7bff6a00\",\r\n            \"investor_id\": \"a6039341-e4b2-461f-9b39-87b668a7a36c\",\r\n            \"loan_id\": \"b63300b1-2306-4cc4-a8ba-4482bcc65c5c\",\r\n            \"invest_amount\": \"1000000\"\r\n        },\r\n        {\r\n            \"id\": \"4395da14-f4e7-4e44-96e9-d8ab20fd666e\",\r\n            \"investor_id\": \"a6039341-e4b2-461f-9b39-87b668a7a36c\",\r\n            \"loan_id\": \"b63300b1-2306-4cc4-a8ba-4482bcc65c5c\",\r\n            \"invest_amount\": \"1000000\"\r\n        }\r\n    ],\r\n    \"documents\": {\r\n        \"id\": \"00230000-1100-4500-0033-000006750000\",\r\n        \"name\": \"foto\",\r\n        \"doc_url\": \"http://bbalblabla\",\r\n        \"description\": \"\",\r\n        \"document_date\": \"2023-09-04T02:54:01.877965Z\",\r\n        \"am_name\": \"aaa\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/loan/d4e7c87c-85a0-4968-acaa-80c0c84a22e0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"loan",
+								"d4e7c87c-85a0-4968-acaa-80c0c84a22e0"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Loan Invest - Lender Buy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"investor_id\": \"a6039341-e4b2-461f-9b39-87b668a7a36c\",\r\n    \"invest_amount\": \"1000000.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/loan/d4e7c87c-85a0-4968-acaa-80c0c84a22e0/invest/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"loan",
+						"d4e7c87c-85a0-4968-acaa-80c0c84a22e0",
+						"invest",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
