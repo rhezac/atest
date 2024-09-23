@@ -42,10 +42,15 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "ReqId",
+						"value": "34234242423",
+						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "http://localhost:9000/api/customer/2936ddc3-48a7-4dce-b26a-1872e097a51a",
+					"raw": "http://localhost:9000/api/customer/[id]",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -54,7 +59,7 @@
 					"path": [
 						"api",
 						"customer",
-						"2936ddc3-48a7-4dce-b26a-1872e097a51a"
+						"[id]"
 					]
 				}
 			},
@@ -109,7 +114,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"albert\",\r\n\t\"nik\": \"312312334212\", \r\n\t\"phone\": \"1234355\",\r\n\t\"email\": \"albert@example.com\"\r\n}",
+					"raw": "{\r\n    \"name\": \"albert\",\r\n\t\"nik\": \"312312334212\", \r\n\t\"phone\": \"1234355\",\r\n\t\"email\": \"albert@example.comm\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -117,7 +122,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/api/customer/b1f97d40-216c-40f7-bcd0-0b38ce827301",
+					"raw": "http://localhost:9000/api/customer/[id]",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -126,7 +131,7 @@
 					"path": [
 						"api",
 						"customer",
-						"b1f97d40-216c-40f7-bcd0-0b38ce827301"
+						"[id]"
 					]
 				}
 			},
@@ -171,7 +176,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:9000/api/loan/d4e7c87c-85a0-4968-acaa-80c0c84a22e0",
+					"raw": "http://localhost:9000/api/loan/[id]",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -180,7 +185,7 @@
 					"path": [
 						"api",
 						"loan",
-						"d4e7c87c-85a0-4968-acaa-80c0c84a22e0"
+						"[id]"
 					]
 				}
 			},
@@ -243,7 +248,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/api/loan/d4e7c87c-85a0-4968-acaa-80c0c84a22e0",
+					"raw": "http://localhost:9000/api/loan/[id]",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -252,7 +257,7 @@
 					"path": [
 						"api",
 						"loan",
-						"d4e7c87c-85a0-4968-acaa-80c0c84a22e0"
+						"[id]"
 					]
 				}
 			},
@@ -296,7 +301,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:9000/api/loan/d4e7c87c-85a0-4968-acaa-80c0c84a22e0/documents/",
+					"raw": "http://localhost:9000/api/loan/[id]/documents/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -305,7 +310,7 @@
 					"path": [
 						"api",
 						"loan",
-						"d4e7c87c-85a0-4968-acaa-80c0c84a22e0",
+						"[id]",
 						"documents",
 						""
 					]
@@ -359,7 +364,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"customer_id\": \"ca775d76-cce1-41f8-a068-6d242ed78ee8\",\r\n    \"loan_product_id\": \"6d2a67ce-3d12-41ec-a92d-d7293258f9ff\",\r\n    \"rate\": \"14\",\r\n    \"validate_date\": \"2023-09-07T02:54:01.877965Z\",\r\n    \"validate_by\": \"jhony\",\r\n    \"approve_date\": \"2023-09-10T02:54:01.877965Z\",\r\n    \"agreement_no\": \"21312332\",\r\n    \"agreement_date\": \"2023-09-11T02:54:01.877965Z\",\r\n    \"agreement_doc_id\": \"00000000-0000-0000-0000-000000000000\",\r\n    \"disbursement_date\": \"2023-09-12T02:54:01.877965Z\",\r\n    \"disbursement_officer\": \"abc\",\r\n    \"principal_amount\": \"5000000\",\r\n    \"total_amount\": \"200000\",\r\n    \"outstanding_amount\": \"233321322\",\r\n    \"roi\": \"5\",\r\n    \"tenor_value\": 50,\r\n    \"loan_status\": \"pending\",\r\n    \"loan_state\": \"proposed\",\r\n    \"kind\": \"\",\r\n    \"investors\": \"\",\r\n    \"documents\": {\r\n        \"id\": \"00230000-1100-4500-0033-000006750000\",\r\n        \"name\": \"foto\",\r\n        \"doc_url\": \"http://bbalblabla\",\r\n        \"description\": \"\",\r\n        \"document_date\": \"2023-09-04T02:54:01.877965Z\",\r\n        \"am_name\": \"aaa\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"customer_id\": \"ca775d76-cce1-41f8-a068-6d242ed78ee8\",\r\n    \"loan_product_id\": \"6d2a67ce-3d12-41ec-a92d-d7293258f9ff\",\r\n    \"rate\": \"14\",\r\n    \"validate_date\": \"2023-09-07T02:54:01.877965Z\",\r\n    \"validate_by\": \"jhony\",\r\n    \"approve_date\": \"2023-09-10T02:54:01.877965Z\",\r\n    \"agreement_no\": \"21312332\",\r\n    \"agreement_date\": \"2023-09-11T02:54:01.877965Z\",\r\n    \"agreement_doc_id\": \"00000000-0000-0000-0000-000000000000\",\r\n    \"disbursement_date\": \"2023-09-12T02:54:01.877965Z\",\r\n    \"disbursement_officer\": \"abc\",\r\n    \"principal_amount\": \"5000000\",\r\n    \"total_amount\": \"200000\",\r\n    \"outstanding_amount\": \"233321322\",\r\n    \"roi\": \"5\",\r\n    \"tenor_value\": 50,\r\n    \"loan_status\": \"pending\",\r\n    \"loan_state\": \"proposed\",\r\n    \"kind\": \"\",\r\n    \"investors\": [],\r\n    \"documents\": {\r\n        \"id\": \"00230000-1100-4500-0033-000006750000\",\r\n        \"name\": \"foto\",\r\n        \"doc_url\": \"http://bbalblabla\",\r\n        \"description\": \"\",\r\n        \"document_date\": \"2023-09-04T02:54:01.877965Z\",\r\n        \"am_name\": \"aaa\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -367,7 +372,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/api/loan/0dc25fd6-aad4-403d-963e-d6a3e58bc9ba",
+					"raw": "http://localhost:9000/api/loan/[id]",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -376,7 +381,7 @@
 					"path": [
 						"api",
 						"loan",
-						"0dc25fd6-aad4-403d-963e-d6a3e58bc9ba"
+						"[id]"
 					]
 				}
 			},
@@ -396,7 +401,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:9000/api/loan/d4e7c87c-85a0-4968-acaa-80c0c84a22e0",
+							"raw": "http://localhost:9000/api/loan/[id]",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -405,7 +410,7 @@
 							"path": [
 								"api",
 								"loan",
-								"d4e7c87c-85a0-4968-acaa-80c0c84a22e0"
+								"[id]"
 							]
 						}
 					},
@@ -429,7 +434,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:9000/api/loan/d4e7c87c-85a0-4968-acaa-80c0c84a22e0",
+							"raw": "http://localhost:9000/api/loan/[id]",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -438,7 +443,7 @@
 							"path": [
 								"api",
 								"loan",
-								"d4e7c87c-85a0-4968-acaa-80c0c84a22e0"
+								"[id]"
 							]
 						}
 					},
@@ -462,7 +467,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:9000/api/loan/d4e7c87c-85a0-4968-acaa-80c0c84a22e0",
+							"raw": "http://localhost:9000/api/loan/[id]",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -471,7 +476,7 @@
 							"path": [
 								"api",
 								"loan",
-								"d4e7c87c-85a0-4968-acaa-80c0c84a22e0"
+								"[id]"
 							]
 						}
 					},
@@ -497,7 +502,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9000/api/loan/d4e7c87c-85a0-4968-acaa-80c0c84a22e0/invest/",
+					"raw": "http://localhost:9000/api/loan/[id]/invest/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -506,7 +511,7 @@
 					"path": [
 						"api",
 						"loan",
-						"d4e7c87c-85a0-4968-acaa-80c0c84a22e0",
+						"[id]",
 						"invest",
 						""
 					]
